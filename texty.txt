@@ -1,0 +1,7 @@
+Master Definition (Async-Await + useEffect) — Desi Style:
+
+"Jab JavaScript me koi kaam aisa ho jo turant na ho (jaise API call), 
+to usse async-await ke zariye handle karte hain — takay JavaScript ruk na jaaye aur kaam bhi ho jaye.
+Lekin React me agar aise kaam ko bina useEffect ke likh diya, to har render pe dobara chalega. 
+Isiliye useEffect ka use karte hain jo React ko bolta hai ki 'render hone de bhai, 
+fir me side me kaam kar lunga — aur sirf ek baar (agar dependency [] hai)'."
