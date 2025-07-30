@@ -1,11 +1,10 @@
 import express from "express"
+import { connectDb } from "./config/dbConection.js"
 const app = express()
 const port = process.env.PORT || 4000
+const mongodbUri = process.env.MONGODB_URI
 
-app.get("/", (req, res) => {
-    res.send("Ready for Social Media Project")
-})
-
+connectDb(mongodbUri)
 
 app.listen(port, () => {
     console.log("Server starded Successfully");
