@@ -4,6 +4,6 @@ const authRouter = express.Router()
 
 authRouter.post("/signup", signUp)
 authRouter.post("/signin", signIn)
-authRouter.post("/signin", signOut)
+authRouter.post("/signout", signOut)
 
 export default authRouter
