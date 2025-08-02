@@ -3,6 +3,7 @@ import connectDb from "./config/dbConection.js"
 import authRouter from "./routes/auth.routes.js"
 import cookieParser from "cookie-parser"
 import cors from "cors"
+import userRouter from "./routes/user.routes.js"
 const app = express()
 const port = process.env.PORT || 4000
 
@@ -14,7 +15,8 @@ app.use(cors({
 }))
 app.use(express.json()) // JSON format mein bheje gaye data ko read karne ke liye (req.body me store hota hai)
 app.use(cookieParser())
-app.use("api/auth", authRouter)
+app.use("/api/auth", authRouter)
+app.use("/api/user", userRouter)
 
 
 app.listen(port, () => {
