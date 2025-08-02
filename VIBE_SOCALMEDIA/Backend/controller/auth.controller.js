@@ -47,7 +47,7 @@ export const signUp = async (req, res) => {
         })
 
         // And finally we are returing the response
-        return res.status(201).json(user)
+        return res.status(200).json({message : `SignUP SuccessFully and user was ${username} !!`, user})
 
     } catch (error) {
         res.status(500).json({ message: `SignUP Error ${error}` });
@@ -80,7 +80,7 @@ export const signIn = async (req, res) => {
             sameSite: "Strict"
         })
 
-        return res.status(200).json(user)
+        return res.status(200).json({message : `SignIn SuccessFully and user was ${username} !!`, user})
 
     } catch (error) {
         res.status(500).json({ message: `SignIn Error ${error}` });
